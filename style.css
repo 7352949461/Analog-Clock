@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/376/442/373/grey-and-brown-bird-on-rock-nuthatch-nuthatch-wallpaper-preview.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.container{
+    position: relative;
+}
+.clock-container{
+    width: 400px;
+    height: 400px;  
+    border-radius: 50%;
+    background-color:rgba(255, 255,255,0.15);
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 0px 25px 4px rgba(255, 255, 255, 0.95) ;
+  }
+
+  .clock-container span{
+    position: absolute;
+    inset: 14px;
+    text-align: center;
+    font-size: 25px;
+    transform: rotate(calc(30deg * var(--deg))) ;
+  }
+
+  .clock-container span b{
+    transform: rotate(calc(-30deg*var(--deg)));
+    display: inline-block;
+  }
+
+  .clock-container::before{
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    z-index: 2;
+   
+  }
+
+  .clock-container div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+   
+  .clock-container div i{
+    width: 6px;
+    position: absolute;
+    height: var(--h);
+    background-color: var(--clr);
+    border-radius: 8px;
+ } 
